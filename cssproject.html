@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin:0;
+            padding:0;
+            line-height:1.5em;
+        }
+        #header{
+            background:black;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100px;
+        }
+        #contentwrapper{
+            float:left;
+            width:100%;
+        }
+        #contentcolumn{
+            margin: 0 230px 0 230px;
+        }
+        #leftcolumn{
+            float: left;
+            width: 230px;
+            margin-left:-100%;
+            background:blue;
+        }
+        #rightcolumn{
+            float:left;
+            width:230px;
+            margin-left:-230px;
+            background:yellow;
+
+        }
+        #innertext{
+            margin:20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color:#5E5E5E;
+        }
+        #footer{
+            clear:left;
+            width:100%;
+            background:black;
+            color:#FFF;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align:center;
+            padding:4px;
+        }
+        /* navigation bar */
+        ul {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            background-color: #000;
+        }
+        li{
+            float:left;
+            border-right:1px solid #bbb;
+        }
+        li:last-child{
+            border-right:none;
+        }
+        li a{
+            display:block;
+            color:white;
+            text-align:center;
+            padding:14px 16px;
+            text-decoration: none;
+
+        }
+        li a:hover:not(.active) {
+            background-color: #808080;
+        }
+        .active{
+            background-color: #0099ff;
+        }
+        @media (max-width:840px){  /*Drop right column down */
+            #leftcolumn{
+                margin-left:-100px;
+            }
+            #rightcolumn{
+                float:none;
+                width:100%;
+                margin-left:0;
+                clear:both;
+            }
+            #contentcolumn{
+                margin-right:0;
+            }
+        }
+        @media (max-width:840px){  /*Drop left column down */
+            #leftcolumn{
+                float:none;
+                width:100%;
+                margin-left:0;
+                clear:both;
+            }
+            #contentcolumn{
+                margin-left:0;
+            }
+        }
+       
+
+
+    </style>
+</head>
+<body>
+   <div id="container">
+       <div id="header">
+           <ul style="display:inline;">
+              <li><a class="active" href="#home">Home</a></li>
+              <li><a href="#news">About</a></li>
+              <li><a href="#contact">News</a></li>
+              <li><a href="about">Contact</a></li>
+           </ul>
+        </div>
+   <div  id="contentwrapper">
+       <div id="contentcolumn">
+           <div class="innertext">
+            <b>Welcome</b><br>
+            Welcome pages serve two purposes: They greet new users and they set their expectations for what is next.
+            Next to come is getting your users to their Aha moment as quickly as possible via a user onboarding experience. 
+            There are several different ways to onboard new users. Your welcome page should serve as step one in that process.
+            Nearly every welcome screen we looked at had their header text end with an exclamation mark. It’s almost uncanny until you think about it.
+            Every person who worked on their product’s welcome page is genuinely excited to welcome each new user.
+            The exclamation mark helps them feel that enthusiasm, which can carry over into their own excitement to use the product.   
+        </div>
+       </div>
+   </div>
+    <div id="leftcolumn">
+        <div class="innertext">
+            <b>Left Column</b><br>
+            Humans have a cognitive bias towards consistency. When someone has agreed 
+            with the messaging you’ve displayed on your post-click landing page enough to
+             sign up for your product, reiterating that same value proposition can
+             help them stay in accordance with their initial journey.
+             Let’s face it, there’s often a drastic jump in experience for a user when 
+            they go from your post-click landing page to inside of your application. That jump can land them in an awkward place 
+            if the copy and design of the welcome page greatly differs.
+            By keeping the language to describe your product’s value proposition consistent,
+             you may harness their momentum enough to keep them clicking around in your app.  
+        </div>
+    </div>
+    <div id="rightcolumn">
+        <div class="innertext">
+            <b>Right Column</b><br>
+            Humans have a cognitive bias towards consistency. When someone has agreed with the 
+            messaging you’ve displayed on your post-click landing page enough to sign up for your product, reiterating 
+            that same value proposition can help them stay in accordance with their initial journey.
+            Let’s face it, there’s often a drastic jump in experience for a user when they go from your post-click 
+            landing page to inside of your application. That jump can land them in an awkward place if the copy and
+             design of the welcome page greatly differs.By keeping the language to describe your product’s value 
+             proposition consistent, you may harness their momentum enough to keep them clicking around in your app.
+        </div>
+    </div>
+    <div id="footer">Footer</div>
+   </div>
+</body>
+</html>
